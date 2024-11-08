@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos Farmacêuticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Produtos Farmacêuticos</h1>
+    <link rel="import" href="http://127.0.0.1:5502/img-index.html">
+    
+    <table id="tabelaProdutos">
+        <caption>Controle de Estoque</caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Prescrição Médica</th>                
+                <th>Qtde Entrada</th>
+                <th>Qtde Saída</th>
+                <th>Qtde Estoque</th>
+                <th>Preço</th>
+                <th>Localidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os dados serão inseridos dinamicamente -->
+        </tbody>
+    </table>
+
+    <h2>Adicionar/Atualizar Produto</h2>
+    <form id="formularioProduto">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required><br>
+    
+        <label for="prescricao">Prescrição Médica:</label>
+        <input type="text" id="prescricao" required><br>
+    
+        <label for="entrada">Qtde Entrada:</label>
+        <input type="number" id="entrada" required><br>
+    
+        <label for="saida">Qtde Saída:</label>
+        <input type="number" id="saida" required><br>
+    
+        <label for="estoque">Qtde Estoque:</label>
+        <input type="number" id="estoque" required><br>
+    
+        <label for="preco">Preço (R$):</label>
+        <input type="number" id="preco" step="0.01" required><br>
+    
+        <label for="localidade">Localidade:</label>
+        <input type="text" id="localidade" required><br>
+    
+        <button type="button" id="btnAdicionar">Adicionar</button>
+        <button type="button" id="btnAtualizar" style="display: none;">Atualizar</button>
+    </form>
+    <script src="dados.js"></script>
+    <script src="src/img/"></script>
+</body>
+</html>

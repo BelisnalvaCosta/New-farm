@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5501/index.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos Farmacêuticos</title>
+    <link rel="stylesheet" href="./Gerenciamento de Produtos Farmacêuticos_files/styles.css">
+</head>
+<body>
+    <h1>Produtos Farmacêuticos</h1>
+    <link rel="import" href="http://127.0.0.1:5502/img-index.html">
+    
+    <table id="tabelaProdutos">
+        <caption>Controle de Estoque</caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Prescrição Médica</th>                
+                <th>Qtde Entrada</th>
+                <th>Qtde Saída</th>
+                <th>Qtde Estoque</th>
+                <th>Preço</th>
+                <th>Localidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody><tr>
+            <td>Paracetamol</td>
+            <td>Não</td>
+            <td>100</td>
+            <td>25</td>
+            <td>75</td>
+            <td>R$ 5.00</td>
+            <td>Farmácia Central</td>
+            <td>
+                <button onclick="editarProduto(0)">Editar</button>
+                <button onclick="deletarProduto(0)">Deletar</button>
+            </td>
+        </tr><tr>
+            <td>Amoxicilina</td>
+            <td>Sim</td>
+            <td>50</td>
+            <td>10</td>
+            <td>40</td>
+            <td>R$ 12.00</td>
+            <td>Farmácia Zona Norte</td>
+            <td>
+                <button onclick="editarProduto(1)">Editar</button>
+                <button onclick="deletarProduto(1)">Deletar</button>
+            </td>
+        </tr><tr>
+            <td>Ibuprofeno</td>
+            <td>Não</td>
+            <td>80</td>
+            <td>20</td>
+            <td>60</td>
+            <td>R$ 8.00</td>
+            <td>Farmácia Centro-Oeste</td>
+            <td>
+                <button onclick="editarProduto(2)">Editar</button>
+                <button onclick="deletarProduto(2)">Deletar</button>
+            </td>
+        </tr><tr>
+            <td>Luftal</td>
+            <td>Não</td>
+            <td>55</td>
+            <td>20</td>
+            <td>35</td>
+            <td>R$ 7.00</td>
+            <td>Monte Claro/SP</td>
+            <td>
+                <button onclick="editarProduto(3)">Editar</button>
+                <button onclick="deletarProduto(3)">Deletar</button>
+            </td>
+        </tr></tbody>
+    </table>
+
+    <h2>Adicionar/Atualizar Produto</h2>
+    <form id="formularioProduto">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required=""><br>
+    
+        <label for="prescricao">Prescrição Médica:</label>
+        <input type="text" id="prescricao" required=""><br>
+    
+        <label for="entrada">Qtde Entrada:</label>
+        <input type="number" id="entrada" required=""><br>
+    
+        <label for="saida">Qtde Saída:</label>
+        <input type="number" id="saida" required=""><br>
+    
+        <label for="estoque">Qtde Estoque:</label>
+        <input type="number" id="estoque" required=""><br>
+    
+        <label for="preco">Preço (R$):</label>
+        <input type="number" id="preco" step="0.01" required=""><br>
+    
+        <label for="localidade">Localidade:</label>
+        <input type="text" id="localidade" required=""><br>
+    
+        <button type="button" id="btnAdicionar" style="display: inline-block;">Adicionar</button>
+        <button type="button" id="btnAtualizar" style="display: none;">Atualizar</button>
+    </form>
+    <script src="./Gerenciamento de Produtos Farmacêuticos_files/dados.js.download"></script>
+    <script src="./Gerenciamento de Produtos Farmacêuticos_files/saved_resource"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
