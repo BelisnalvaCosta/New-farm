@@ -1,7 +1,7 @@
 # New-farm
 Projeto feito na IDE Visual Studio Code, linguagem: HTML, JavaScript e CSS [^1].
 
-Gerenciamento de Estoque de farmacia com imagens em carrosel.
+Gerenciamento de Estoque de farmácia com imagens em carrosel.
 
 ![Gerenciamento de Produtos](https://github.com/user-attachments/assets/4651f441-2468-457f-86ae-c01c3401a975)
 
