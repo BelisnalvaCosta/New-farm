@@ -1,0 +1,47 @@
+CREATE TABLE Produto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    img_medicamento VARCHAR(255),
+    quantidade_entrada INT,
+    quantidade_saida INT,
+    quantidade_estoque INT,
+    preco DECIMAL(10, 2)
+);
+
+-- Atualização automática do estoque no momento da inserção
+DELIMITER //
+CREATE TRIGGER atualiza_estoque_insert
+BEFORE INSERT ON Produto
+FOR EACH ROW
+BEGIN
+    SET NEW.quantidade_estoque = NEW.quantidade_entrada - NEW.quantidade_saida;
+END;
+//
+DELIMITER ;
+
+-- Atualização automática do estoque no momento da atualização
+DELIMITER //
+CREATE TRIGGER atualiza_estoque_update
+BEFORE UPDATE ON Produto
+FOR EACH ROW
+BEGIN
+    SET NEW.quantidade_estoque = NEW.quantidade_entrada - NEW.quantidade_saida;
+END;
+//
+DELIMITER ;
+
+CREATE TABLE Central_medicamento (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_farmacia VARCHAR(255),
+    proprietario VARCHAR(255),
+    localizacao VARCHAR(255)
+);
+
+CREATE TABLE Usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    sobrenome VARCHAR(255),
+    data_nascimento DATE,
+    contato VARCHAR(255),
+    localizacao_farmacia VARCHAR(255)
+);

@@ -1,7 +1,10 @@
 let produtosFarmaceuticos = [
     { nome: "Paracetamol", prescricao_medica: "Não", qtde_entrada: 100, qtde_saida: 25, qtde_estoque: 75, preco: 5.00, localidade_farmacia: "Farmácia Central" },
     { nome: "Amoxicilina", prescricao_medica: "Sim", qtde_entrada: 50, qtde_saida: 10, qtde_estoque: 40, preco: 12.00, localidade_farmacia: "Farmácia Zona Norte" },
-    { nome: "Ibuprofeno", prescricao_medica: "Não", qtde_entrada: 80, qtde_saida: 20, qtde_estoque: 60, preco: 8.00, localidade_farmacia: "Farmácia Centro-Oeste" }
+    { nome: "Cimegripe", prescricao_medica: "Não", qtde_entrada: 65, qtde_saida: 18, qtde_estoque: " ", preco: 46.90, localidade_farmacia: "Farmácia Santa Cecília/SP" },
+    { nome: "Luftal", prescricao_medica: "Sim", qtde_entrada: 50, qtde_saida: 32, qtde_estoque: 40, preco: 26.00, localidade_farmacia: "Farmácia Zona Norte" },
+    { nome: "Dipirona", prescricao_medica: "Sim", qtde_entrada: 48, qtde_saida: 13, qtde_estoque: " ", preco: 7.00, localidade_farmacia: "Farmácia São Paulo/SP" },
+    { nome: "Ibuprofeno", prescricao_medica: "Não", qtde_entrada: 80, qtde_saida: 20, qtde_estoque: 60, preco: 8.00, localidade_farmacia: "Farmácia Centro-Oeste" }     
 ];
 
 let editandoIndex = -1;
