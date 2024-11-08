@@ -8,6 +8,12 @@ h1 {
     color: #333;
 }
 
+#body-tem-image {
+    align-items: center;
+    margin: 8rem;
+    padding: 4rem;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
